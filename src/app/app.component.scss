@@ -1,0 +1,46 @@
+@import "../scss/base/_variables";
+
+
+.logo {
+  width: 150px;
+}
+
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  background: $grey;
+  position: relative;
+}
+
+.menu {
+  display: flex;
+
+
+  &__item {
+    border-radius: 5px;
+
+    &--active {
+      background: $blue;
+    }
+
+    span {
+      font: 16px $font;
+      text-transform: uppercase;
+      margin-left: 10px;
+    }
+  }
+}
+
+.dropdown {
+  &__item {
+
+
+
+    span {
+      font-family: $font;
+      text-transform: uppercase;
+    }
+  }
+
+}

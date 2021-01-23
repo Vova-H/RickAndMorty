@@ -1,0 +1,42 @@
+<h1 class="title">Characters</h1>
+
+<div class="card-wrapper">
+  <mat-card *ngFor="let person of characters" class="card">
+
+    <mat-card-header>
+      <mat-card-title>{{person.name |uppercase}}</mat-card-title>
+      <mat-card-subtitle>{{person.status}} - {{person.species}}</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image src="https://rickandmortyapi.com/api/character/avatar/1.jpeg" alt="Photo of a Shiba Inu">
+
+    <mat-card-content>
+      <p><span> Last know location: </span> {{person.location.name}} </p>
+    </mat-card-content>
+
+    <mat-card-actions>
+      <button mat-raised-button class="card__btn" (click)="showEpisodes(person.episode)">Show list episodes</button>
+    </mat-card-actions>
+
+
+  </mat-card>
+</div>
+
+<!-- <mat-card class="example-card">
+  <mat-card-header>
+    <div mat-card-avatar class="example-header-image"></div>
+    <mat-card-title>Shiba Inu</mat-card-title>
+    <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+  </mat-card-header>
+  <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+  <mat-card-content>
+    <p>
+      The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+      A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
+      bred for hunting.
+    </p>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-button>LIKE</button>
+    <button mat-button>SHARE</button>
+  </mat-card-actions>
+</mat-card> -->
